@@ -49,11 +49,13 @@ function selectedItem(){
 
 // Q3)Create an image slider without referring online codes, completely by yourself
 
-let ison=false;
-document.getElementById("togglebtn").addEventListener("click",()=>{
-    ison=!ison
-    document.getElementById("togglebtn").innerText=ison==true?"ON":"OFF";
-    document.getElementById("togglebtn").style.backgroundColor = ison ? "green" : "rgb(181, 181, 181)";
+let isOn = false; // Renamed variable for better readability
+
+document.getElementById("togglebtn").addEventListener("click", () => {
+    isOn = !isOn;
+    const toggleBtn = document.getElementById("togglebtn");
+    toggleBtn.innerText = isOn ? "ON" : "OFF";
+    toggleBtn.style.backgroundColor = isOn ? "green" : "rgb(181, 181, 181)";
 });
 
 
