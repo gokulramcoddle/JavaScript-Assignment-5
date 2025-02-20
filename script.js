@@ -1,13 +1,13 @@
 // Q1)Create a button and div using JS, when clicked on the button your basic details should be shown in the div. The static html file should only contain the basic HTML structure, no div/buttons .
 
-var div=document.createElement("div");
+let div=document.createElement("div");
 div.id="msg";
 div.style.height="100px";
 div.style.width="500px";
 div.style.backgroundColor=" rgb(245, 227, 227)";
 div.style.display="none";
 
-var button=document.createElement("button");
+let button=document.createElement("button");
 button.id="btn";
 button.innerText="click";
 
@@ -26,10 +26,10 @@ document.getElementById("q1").appendChild(button);
 
 // Q2)Consider an array with name of 5 fruits, map this array and create five checkboxes with their corresponding names. In a div show the fruit names which are checked.
 
-var fruits=["Apple","Orange","Graphes","Bananna","Pineapple"];
+const fruits=["Apple","Orange","Graphes","Bananna","Pineapple"];
 fruits.forEach(fruit=>{
-    var label=document.createElement("label");
-    var checkbox=document.createElement("input");
+    let label=document.createElement("label");
+    let checkbox=document.createElement("input");
     checkbox.type="checkbox";
     checkbox.value=fruit;
 
@@ -42,14 +42,14 @@ fruits.forEach(fruit=>{
 });
 
 function selectedItem(){
-   var items=Array.from(document.querySelectorAll("input[type='checkbox']:checked")).map(si=>si.value);
+   let items=Array.from(document.querySelectorAll("input[type='checkbox']:checked")).map(si=>si.value);
    document.getElementById("selected").innerText= 
    items.length>0 ? "Selected items: "+ items.join(", ") : "Selected items: ";
 }
 
 // Q3)Create an image slider without referring online codes, completely by yourself
 
-var ison=false;
+let ison=false;
 document.getElementById("togglebtn").addEventListener("click",()=>{
     ison=!ison
     document.getElementById("togglebtn").innerText=ison==true?"ON":"OFF";
@@ -64,9 +64,9 @@ document.getElementById("togglebtn").addEventListener("click",()=>{
 
 // Q4)Create an image slider without referring online codes, completely by yourself.
 
-var index=0;
-var images=document.querySelectorAll(".img-box img")
-var totalimg=images.length;
+let index=0;
+let images=document.querySelectorAll(".img-box img")
+let totalimg=images.length;
 
 function changeimage(idx){
     images[index].classList.remove("active");
