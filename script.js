@@ -53,12 +53,7 @@ let ison=false;
 document.getElementById("togglebtn").addEventListener("click",()=>{
     ison=!ison
     document.getElementById("togglebtn").innerText=ison==true?"ON":"OFF";
-    if(ison){
-        document.getElementById("togglebtn").style.backgroundColor="green";  
-    }
-    else{
-        document.getElementById("togglebtn").style.backgroundColor=" rgb(181, 181, 181)";
-    }
+    document.getElementById("togglebtn").style.backgroundColor = ison ? "green" : "rgb(181, 181, 181)";
 });
 
 
